@@ -1,12 +1,4 @@
-/*   
- * Template Name: Appkit Landing - Responsive Website Template for Developers
- * Version: 1.0
- * Author: Xiaoying Riley
- * Website: http://themes.3rdwavemedia.com/
- * Twitter: @3rdwave_themes
-* License: Creative Commons Attribution 3.0 License
-*/
-/* Theme default */
+
 body {
   font-family: 'Open Sans', arial, sans-serif;
   color: #494d55;
@@ -1173,10 +1165,6 @@ background-color: #40babd !important;
     width: 40px; }
 
 
-    .col-md-3 {
-    width: 25%;
-  }
-
   .image-popup {
     opacity: 1;
 }
@@ -1342,4 +1330,23 @@ background-color: #40babd !important;
 }
 .stores a:hover {
     opacity: 1
+}
+
+.video-container {
+  position:relative;
+  padding-bottom:56.25%;
+  padding-top:10px;
+  height:200px;
+  overflow:hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+  position:absolute;
+  top:0;
+  left:0;
+  width:90%;
+  height:67%;
+  margin-left: 20px;
 }
