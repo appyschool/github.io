@@ -747,14 +747,14 @@ background-color: #40babd !important;
 .contact-section {
   padding-top: 90px;
   padding-bottom: 90px;
-  background: #494d55 url('../images/map.png') no-repeat center center;
+  background: #494d55 url('../images/oval.jpg') no-repeat center center;
   color: #fff;
 }
 .contact-section .section-title {
   margin: 0;
   margin-bottom: 15px;
   font-size: 36px;
-  font-weight: 300;
+  font-weight: 500;
   margin-bottom: 30px;
 }
 .contact-content {
@@ -762,6 +762,8 @@ background-color: #40babd !important;
   margin: 0 auto;
   margin-bottom: 60px;
   text-align: center;
+  font-weight: 500;
+  
 
 }
 .contact-content p b {
@@ -1350,3 +1352,5 @@ background-color: #40babd !important;
   height:67%;
   margin-left: 20px;
 }
+
+
