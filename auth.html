@@ -9,8 +9,7 @@
 <script>
       var urlParams = new URLSearchParams(window.location.search);
       var code = urlParams.get('code');
-      var redirectUrl = 'com.varchinno.appyschool.staff://token#' + code;
-      window.location.assign(redirectUrl);
+      window.open('appyschoolstaff://auth_token?'+code, '_system')
 </script>
 </body>
 </html>
