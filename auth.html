@@ -9,7 +9,7 @@
 <script>
       var urlParams = new URLSearchParams(window.location.search);
       var code = urlParams.get('code');
-      window.open('appyschoolstaff://auth_token?'+code, '_system')
+      window.location.assign('appyschoolstaff://auth_token?'+code)
 </script>
 </body>
 </html>
