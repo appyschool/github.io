@@ -6,9 +6,11 @@
     'none';script-src 'unsafe-inline';">
 </head>
 <body>
-    <script>
+<script>
       var urlParams = new URLSearchParams(window.location.search);
       var code = urlParams.get('code');
-      window.location.assign('com.varchinno.appyschool.staff://token#' + code);</script>
+      var redirectUrl = 'com.varchinno.appyschool.staff://token#' + code;
+      window.location.assign(redirectUrl);
+</script>
 </body>
 </html>
