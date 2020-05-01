@@ -6,7 +6,9 @@
     'none';script-src 'unsafe-inline';">
 </head>
 <body>
-    <script>window.location.assign('com.varchinno.appyschool.staff://token' +
-    window.location.hash);</script>
+    <script>
+      var urlParams = new URLSearchParams(window.location.search);
+      var code = urlParams.get('code');
+      window.location.assign('com.varchinno.appyschool.staff://token#' + code);</script>
 </body>
 </html>
