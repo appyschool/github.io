@@ -745,10 +745,10 @@ background-color: #40babd !important;
 }
 /* ======= Contact Section ======= */
 .contact-section {
-  padding-top: 90px;
-  padding-bottom: 90px;
-  background: #494d55 url('../images/oval.jpg') no-repeat center center;
-  color: #fff;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  /* background: #494d55 url('../images/oval.jpg') no-repeat center center; */
+  color: #000;
 }
 .contact-section .section-title {
   margin: 0;
