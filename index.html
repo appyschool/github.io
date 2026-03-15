@@ -1,676 +1,853 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> 
-<html lang="en"> <!--<![endif]-->  
+<html lang="en">
+
 <head>
-    <title>Appy School</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Web based School Management Solution with mobile applications for Parents and Staff">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
-    <link rel="shortcut icon" href="favicon.ico">  
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-    <link rel="canonical" href="index.html"/>
-    <!-- <link rel="stylesheet" href="css2/style.css" type="text/css" media="screen" /> -->
-    <link rel="stylesheet" href="css2/styles/fonts.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" type="text/css" />
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oxygen:400,300,700" type="text/css" />
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Headland+One" type="text/css" />
-    <link rel="stylesheet" href="css2/styles/jackbox.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="css2/styles/jquery.jPlayer.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="css2/styles/jquery.isotope.css" type="text/css" media="screen" />
-</head> 
+    <title>Appy School | The Modern School Operating System</title>
+
+    <meta name="description"
+        content="Appy School is the ultimate all-in-one ERP platform. Unify administration, engage parents, and empower teachers with our Web and Mobile Apps.">
+
+    <!-- Google Fonts: Plus Jakarta Sans (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Boxicons for Modern Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Leaflet CSS for Interactive Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
 
 <body>
-    <!-- ******HEADER****** --> 
-    <header id="header" class="header">  
-        <div class="container">       
-            <h1 class="logo">
-                <a class="scrollto" href="#hero">
-                    <span class="logo-icon-wrapper"><img class="logo-icon" src="assets/images/appylogo.png" alt="icon"></span>
-                    <span class="text"><span class="highlight">APPY </span>School</span></a>
-                </h1><!--//logo-->
-                <nav class="main-nav navbar-right" role="navigation">
-                    <div class="navbar-header">
-                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button><!--//nav-toggle-->
-                    </div><!--//navbar-header-->
-                    <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            <li class="active nav-item"><a class="scrollto" href="#about">About</a></li>
-                            <li class="nav-item"><a class="scrollto" href="#modules">Modules</a></li>                 
-                            <li class="nav-item"><a class="scrollto" href="#features">Features</a></li> 
-                            <li class="nav-item"><a class="scrollto" href="#demo">Demo Videos</a></li> 
-                            <li class="nav-item"><a class="scrollto" href="#contact">Contact</a></li>
-                        </ul><!--//nav-->
-                    </div><!--//navabr-collapse-->
-                </nav><!--//main-nav-->                     
-            </div><!--//container-->
-        </header><!--//header-->
 
-        <div id="hero" class="hero-section">
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container navbar">
+            <a href="#" class="brand">
+                <img src="assets/images/AppySchool_logo-Photoroom.png" alt="Appy School Logo" class="logo">
+            </a>
 
-            <div id="hero-carousel" class="hero-carousel carousel carousel-fade slide" data-ride="carousel" data-interval="8000">
-                <div class="figure-holder-wrapper">
-                    <div class="container">
-                        <div class="row">
-                            <div class="figure-holder">
-                                <img class="figure-image img-responsive" src="assets/images/mixed.png" alt="Appy School" />
-                            </div><!--//figure-holder-->
-                        </div><!--//row-->
-                    </div><!--//container-->
-                </div><!--//figure-holder-wrapper-->
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li class="active" data-slide-to="0" data-target="#hero-carousel"></li>
-                    <li data-slide-to="1" data-target="#hero-carousel"></li>
-                    <li data-slide-to="2" data-target="#hero-carousel"></li>
-                </ol>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#platform" class="nav-link">Platform</a></li>
+                    <li><a href="#solutions" class="nav-link">Solutions</a></li>
+                    <li><a href="#apps" class="nav-link">Mobile Apps</a></li>
+                    <li><a href="#ai" class="nav-link" style="color: #a855f7;">✨ AI Features</a></li>
+                    <li><a href="#security" class="nav-link">Security & Trust</a></li>
+                </ul>
+            </nav>
 
-                <!-- Wrapper for slides -->
-                <div class="carousel-inner">
-
-                    <div class="item item-1 active">
-
-                        <div class="item-content container">
-
-                            <div class="item-content-inner">
-
-                                <h2 class="heading">An all-in-one Web and App based School ERP solution</h2>
-                                <p class="intro">Designed with easy-to-use user interface and with all essential features, Appy School is one stop destination for any modern day school</p>
-                                <a class="btn btn-primary btn-cta scrollto" href="#modules" target="_blank">Know More</a>
-                                <div id="stores" style="margin-top:100px" class="stores">
-                                  <a href="https://play.google.com/store/apps/details?id=com.varchinno.appyschool.parent" target="_blank"><img src="assets/images/google.png" alt="Parent App Android" /></a>&nbsp
-                                  &nbsp<a href="https://itunes.apple.com/us/app/appy-school-parent/id1249817799?ls=1&mt=8" target="_blank"><img src="assets/images/appstore.png" alt="Parent App iOS" />
-                              </a>
-                              <br />
-                          </div> 
-                      </div><!--//item-content-inner-->
-                  </div><!--//item-content-->
-              </div><!--//item-->
-
-              <div class="item item-2">
-                <div class="item-content container">
-                    <div class="item-content-inner">
-
-                       <h2 class="heading">App For Parents</h2>
-                       <p class="intro">Built with instant notification support, the Appy Parent App helps in building a bridge between Parents and School like never before.</p>
-                       <a class="btn btn-primary btn-cta scrollto" href="#consoleandapps" target="_blank">Know More</a>
-                       <div id="stores" style="margin-top:100px" class="stores">
-                          <a href="https://play.google.com/store/apps/details?id=com.varchinno.appyschool.parent" target="_blank"><img src="assets/images/google.png" alt="Parent App Android" /></a>&nbsp
-                          &nbsp<a href="https://itunes.apple.com/us/app/appy-school-parent/id1249817799?ls=1&mt=8" target="_blank"><img src="assets/images/appstore.png" alt="Parent App iOS" />
-                      </a>
-                      <br />
-                  </div> 
-              </div><!--//item-content-inner-->
-          </div>
-      </div><!--//item-->
-
-      <div class="item item-3">
-        <div class="item-content container">
-            <div class="item-content-inner">
-
-                <h2 class="heading">App for Staff</h2>
-                <p class="intro">Now manage scholastic activities in a smarter way. Take attendance, give assignments, make assessments, address concerns from guardians, etc. all from one place!</p>
-                <a class="btn btn-primary btn-cta scrollto" href="#consoleandapps" target="_blank">Know More</a>
-                <div id="stores" style="margin-top:100px" class="stores">
-                  <a href="https://play.google.com/store/apps/details?id=com.varchinno.appyschool.staff" target="_blank"><img src="assets/images/google.png" alt="Staff App Android" /></a>&nbsp
-                  &nbsp<a href="https://itunes.apple.com/us/app/appy-school-staff/id1344534127?mt=8" target="_blank"><img src="assets/images/appstore.png" alt="Staff App iOS" />
-              </a>
-              <br />
-          </div> 
-      </div><!--//item-content-inner-->
-  </div>
-</div><!--//item-->
-</div><!--//carousel-inner-->
-
-</div><!--//carousel-->
-</div><!--//hero-->
-
-<div id="about" class="about-section" data-section="products">
-
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
-                <h2 class="fh5co-lead animate-single product-animate-1">What's Appy School?</h2>
-                <p class="fh5co-sub animate-single product-animate-2">Activities like Student Management, Staff Management, Fee Management, Attendance, Assessments, Assignments, Messaging with SMS & Emails, Accounting, Creating Events, Announcements, and many more, can all be performed digitally with Appy School.​</p>
-            </div>
-            
-            <div class="items-wrapper row">
-                <div class="item col-sm-4 col-xs-12">
-                    <div class="item-inner">
-                        <div class="figure-holder">
-                            <a class="scrollto" href="#consoleandapps" target="_blank">
-                                <img style="height:170px;" class="figure-image" src="assets/images/imac3.png" alt="Web Console">
-                            </a>
-                        </div><!--//figure-holder-->
-                        <h3 class="item-title">Web console</h3>
-                        <div class="item-desc">
-                            Management Console for managing all the activities and engagements. Users with privileges can access specific modules in the console. The console can be accessed from anywhere in the web.
-
-                        </div><!--//item-desc-->
-                    </div><!--//item-inner-->
-                </div><!--//item-->
-                
-                <div class="item col-sm-4 col-xs-12">
-                    <div class="item-inner">
-                        <div class="figure-holder">
-                            <a class="scrollto" href="#consoleandapps" target="_blank">
-                                <img style="height:170px" class="figure-image" src="assets/images/ParentStaff.png" alt="Mobile Apps">
-                            </a>
-                        </div><!--//figure-holder-->
-                        <h3 class="item-title">Mobile Apps</h3>
-                        <div class="item-desc">
-                            Mobile Apps for on-the-go communication between the School and Parents. Parents can track their child’s performance, raise concerns, receive instant notifications from the school management</div><!--//item-desc-->
-                        </div><!--//item-inner-->
-                    </div><!--//item-->
-
-                    <div class="item col-sm-4 col-xs-12">
-                        <div class="item-inner">
-                            <div class="figure-holder">
-                                <a class="scrollto" href="#consoleandapps" target="_blank">
-                                    <img style="height:100px; margin-bottom:-180px" class="figure-image" src="assets/images/delivery.png" alt="Delivery Channels">
-                                </a>
-                            </div><!--//figure-holder-->
-                            <h3 class="item-title">Delivery Channels</h3>
-                            <div class="item-desc">
-                                With instant notifications, and support over three delivery channels, viz., App notifications, SMS and Emails, Appy School is the one stop solution for any school.​</div><!--//item-desc-->
-                            </div><!--//item-inner-->
-                        </div><!--//item-->
-
-
-                    </div><!--//items-wrapper-->
-                </div><!--//container-->
-            </div><!--//about-section-->
-
-            <div id="modules" data-section="products">
-
-                <div class="container">
-
-                    <div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
-                        <h2 class="fh5co-lead animate-single product-animate-1" >Modules at a glance</h2>
-                        <p  class="fh5co-sub animate-single product-animate-2">Appy School supports the following key modules which are essential to the functioning of any modern day school.</p>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="assets/images/studentmgmt.jpg" alt="Student Management" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Student Management</h3>
-                                <p class="fh5co-figure-text">Add/Import/View Student Profiles. Assign standard/section to students and track performance</p>
-                            </a>
-                        </div>
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="assets/images/staffmgmt.jpg" alt="Staff Management" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Staff Management</h3>
-                                <p class="fh5co-figure-text">Maintain catalog of Staff Details including staff profile, standards and subjects assigned, time table, etc.</p>
-                            </a>
-                        </div>
-						
-                        
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a  class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="assets/images/attendancemgmt.jpg" alt="Attendance Management" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Attendance Management</h3>
-                                <p class="fh5co-figure-text">Take/View attendance for students and Staff. Instant Notification triggered on absence. Manage School Calendar</p>
-                            </a>
-                        </div>
-						
-						<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a  class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="assets/images/assignments.jpg" alt="Assignments" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Assignments</h3>
-                                <p class="fh5co-figure-text">Create assignments from Console or Staff App. Parent is notified immediately. Consolidated assignment mail sent daily</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row">
-						<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="assets/images/bulknotify.jpg" alt="Messaging" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Messaging</h3>
-                                <p class="fh5co-figure-text">Send app notifications, SMS or Emails to entire school/class, student or a group of students. Personalized messages can also be created for every student. Appy School is one stop messaging solution for any school.</p>
-                            </a>
-                        </div>
-
-                       
-
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a  class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="assets/images/academicmgmt.jpg" alt="Assessments" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Assessments</h3>
-                                <p class="fh5co-figure-text">Provide assessments for students per exam through the Console or Staff mobile App. Generate Report Cards on demand basis for exam(s)</p>
-                            </a>
-                        </div>
-						
-						<!-- <div class="clearfix visible-sm-block"></div> -->
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="assets/images/feemgmt.jpg" alt="Fee Management" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Fee Management</h3>
-                                <p class="fh5co-figure-text">Define Fee Types and update Fee details of students. Instant Notifications sent to parents on Fee update or Fee Due</p>
-                            </a>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="assets/images/accounting.jpg" alt="Accounting" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Accounting</h3>
-                                <p class="fh5co-figure-text">Record income, expenses, and other transactions pertaining to school. View credit/debit summary for ledger accounts configured</p>
-                            </a>
-                        </div>
-                        
-                    </div>
-
-                    <div class="row">
-
-                        
-
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="assets/images/events.jpeg" alt="Events&Announcements" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Events & Announcements</h3>
-                                <p class="fh5co-figure-text">Create events and make announcements. This sends automatic notifications to the parent app with option to join the event and book slots</p>
-                            </a>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a  class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="assets/images/gallery.jpg" alt="Photo Gallery" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Photo Gallery</h3>
-                                <p class="fh5co-figure-text">Upload pictures of school events from the web console as well as Staff App. The album once shared is avilable for view and download in the parent app</p>
-                            </a>
-                        </div>
-
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="assets/images/concerns.jpg" alt="Concerns" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Concerns</h3>
-                                <p class="fh5co-figure-text">Raise concerns and complaints with the school management from the Parennt App. Staff/Management can update the status from the console as well as Staff App</p>
-                            </a>
-                        </div>
-						
-						                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="assets/images/enquiry.jpg" alt="Concerns" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Enquiry Management</h3>
-                                <p class="fh5co-figure-text">Record the enquiries coming from parents. Gather and store information of the prospects mentioning the source of enquiry like Facebook, Google, Advertisement, Flyer, etc.</p>
-                            </a>
-                        </div>
-						
-						 
-
-                    </div>
-					<div class="row">
-					</div>
-						<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="assets/images/onlineexam.jpg" alt="Events&Announcements" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Online Exams</h3>
-                                <p class="fh5co-figure-text">Staff can create mock exams for students. The students can take the exams on the app and get evaluated online.
-								</p>
-                            </a>
-                        </div>
-
-
-						
-						<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="assets/images/food.jpg" alt="Transport Management" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Food Management</h3>
-                                <p class="fh5co-figure-text">School Management/Staff can upload pictures of food provided to students and send emails/App notifications to Parents. The parent receives immediate notification on the App with food pictures available for download</p>
-                            </a>
-                        </div>
-					
-					
-					<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="assets/images/transportmgmt.jpg" alt="Transport Management" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Transport Management</h3>
-                                <p class="fh5co-figure-text">Add vehicles and bus routes. Map students with vehicles and routes and track the bus in real time</p>
-                            </a>
-                        </div>
-
-                      
-
-                        <div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12">
-                            <a  class="fh5co-figure to-animate image-popup">
-                                <figure>
-                                    <img src="assets/images/document.png" alt="Photo Gallery" class="img-responsive">
-                                </figure>
-                                <h3 class="fh5co-figure-lead">Document Management</h3>
-                                <p class="fh5co-figure-text">Upload School specific documents. Manage Student specific documents. Download/View documents anytime</p>
-                            </a>
-                        
-						
-
-                    </div>
+            <div class="nav-cta">
+                <a href="javascript:void(0)" class="btn btn-primary trigger-demo-modal">Book a Demo</a>
+                <div class="mobile-toggle" id="mobile-toggle">
+                    <i class='bx bx-menu'></i>
                 </div>
             </div>
-
-            <div id="features" class="features-section">
-                <div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
-                    <h2 class="fh5co-lead animate-single product-animate-1" >Explore Amazing features</h2>
-                    <p  class="fh5co-sub animate-single product-animate-2">Deep dive into the three major components of Appy School: Web console, Parent App & Staff App. Be amazed with the simplicity of the interface, a product tailor made for your school</p>
-                </div>
-                <div class="container text-center">
-
-                    <div id="hero">
-                        <div id="hero-carouse2" style="height:750px !important" class="carousel slide carousel-fade hero-carousel " data-ride="carousel" data-interval="10000">
-
-                            <!-- Indicators -->
-                            <ol class="carousel-indicators carousel-indicators-color" style="position:relative">
-                                <li class="active" data-slide-to="0" data-target="#hero-carouse2"></li>
-                                <li data-slide-to="1" data-target="#hero-carouse2"></li>
-                                <li data-slide-to="2" data-target="#hero-carouse2"></li>
-                            </ol>
-
-                            <!-- Wrapper for slides -->
-                            <div id="consoleandapps" class="carousel-inner">
-
-                                <div class="item active">
-                                    <div class="tabbed-area row">
-                                        <!-- Nav tabs -->
-                                        <ul class="feature-nav nav nav-pill nav-stacked text-left col-md-4 col-sm-6 col-xs-12 col-md-push-8 col-sm-push-6 col-xs-push-0" role="tablist" style="margin-top: 5px !important">
-                                            <li role="presentation" ><a aria-controls="feature-1" role="tab" data-toggle="tab"><h2 style="margin-top: -10px !important"><i class="fa fa-desktop"> Web Console</i></h2></a></li>
-
-                                            <li role="presentation" class="active"><a href="#feature-web-1" aria-controls="feature-1" role="tab" data-toggle="tab"><i class="fa fa-bar-chart"></i>Dashboard With Analytics</a></li>
-
-                                            <li role="presentation"><a href="#feature-web-2" aria-controls="feature-2" role="tab" data-toggle="tab"><i class="fa fa-user"></i>Student Management</a></li>
-
-                                            <li role="presentation"><a href="#feature-web-3" aria-controls="feature-3" role="tab" data-toggle="tab"><i class="fa fa-user-secret"></i>Staff Management</a></li>
-
-                                            <li role="presentation"><a href="#feature-web-4" aria-controls="feature-4" role="tab" data-toggle="tab"><i class="fa fa-credit-card"></i>Fee Management</a></li>
-
-                                            <li role="presentation"><a href="#feature-web-5" aria-controls="feature-5" role="tab" data-toggle="tab"><i class="fa fa-money"></i>Accounting</a></li>
-
-                                            <li role="presentation"><a href="#feature-web-6" aria-controls="feature-6" role="tab" data-toggle="tab"><i class="fa fa-bullhorn"></i>Events/Announcements</a></li>
-
-                                            <li role="presentation"><a href="#feature-web-7" aria-controls="feature-7" role="tab" data-toggle="tab"><i class="fa fa-users"></i>Users Management</a></li>
-
-                                            <li role="presentation"><a href="#feature-web-8" aria-controls="feature-8" role="tab" data-toggle="tab"><i class="fa fa-rocket"></i>Notifications (Push, SMS & Email) </a></li>
-
-                                            <li role="presentation"><a href="#feature-web-9" aria-controls="feature-9" role="tab" data-toggle="tab"><i class="fa fa-bus"></i>Transport Management</a></li>
-                                        </ul>
-
-                                        <!-- Tab panes -->
-                                        <div class="feature-content tab-content col-md-8 col-sm-6 col-xs-12 col-md-pull-4 col-sm-pull-6 col-xs-pull-0">
-                                            <div role="tabpanel" class="tab-pane fade in active" id="feature-web-1">
-                                                <img class="img-responsive img-rounded" src="assets/images/feature-web-1.png" alt="screenshot" style ="">
-                                            </div>
-                                            <div role="tabpanel" class="tab-pane fade" id="feature-web-2">
-                                                <img class="img-responsive" src="assets/images/feature-web-2.png" alt="screenshot" style ="" >
-                                            </div>
-                                            <div role="tabpanel" class="tab-pane fade" id="feature-web-3">
-                                                <img class="img-responsive" src="assets/images/feature-web-3.png" alt="screenshot" style ="" >
-                                            </div>
-                                            <div role="tabpanel" class="tab-pane fade" id="feature-web-4">
-                                             <img class="img-responsive" src="assets/images/feature-web-4.png" alt="screenshot" style ="" >
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-web-5">
-                                             <img class="img-responsive" src="assets/images/feature-web-5.png" alt="screenshot" style ="" >
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-web-6">
-                                             <img class="img-responsive" src="assets/images/feature-web-6.png" alt="screenshot" style ="" >
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-web-7">
-                                           <img class="img-responsive" src="assets/images/feature-web-7.png" alt="screenshot" style ="" >
-                                       </div>
-                                       <div role="tabpanel" class="tab-pane fade" id="feature-web-8">
-                                         <img class="img-responsive" src="assets/images/feature-web-8.png" alt="screenshot" style ="" ></div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-web-9">
-                                             <img class="img-responsive" src="assets/images/feature-web-9.png" alt="screenshot" style ="" ></div>
-                                         </div><!--//feature-content-->
-                                     </div><!--//tabbed-area-->
-                                 </div><!--//item-->
-
-                                 <div id="parentapp" class="item">
-                                    <div class="tabbed-area row">
-
-                                        <!-- Nav tabs -->
-                                        <ul class="feature-nav nav nav-pill nav-stacked text-left col-md-4 col-sm-6 col-xs-12 col-md-push-8 col-sm-push-6 col-xs-push-0" role="tablist" style="margin-top: 5px !important">
-                                            <li role="presentation" ><a aria-controls="feature-1" role="tab" data-toggle="tab"><h2 style="margin-top: -10px !important"><i class="fa fa-mobile"> Parent App</i></h2></a></li>
-                                            <li role="presentation" class="active">
-                                                <a href="#feature-parent-1" aria-controls="feature-1" role="tab" data-toggle="tab"><i class="fa fa-bar-chart"></i>Dashboard With Analytics</a>
-                                            </li>
-
-                                            <li role="presentation"><a href="#feature-parent-2" aria-controls="feature-2" role="tab" data-toggle="tab"><i class="fa fa-calendar-check-o"></i>Track Attendance, Holidays</a></li>
-
-                                            <li role="presentation"><a href="#feature-parent-3" aria-controls="feature-6" role="tab" data-toggle="tab"><i class="fa fa-edit"></i>Track Assignments</a></li>
-
-                                            <li role="presentation"><a href="#feature-parent-4" aria-controls="feature-3" role="tab" data-toggle="tab"><i class="fa fa-line-chart"></i>Assesment Reports</a></li>
-
-                                            <li role="presentation"><a href="#feature-parent-5" aria-controls="feature-4" role="tab" data-toggle="tab"><i class="fa fa-rupee"></i>Fee Details</a></li>
-
-                                            <li role="presentation"><a href="#feature-parent-6" aria-controls="feature-5" role="tab" data-toggle="tab"><i class="fa fa-image"></i>Photo Gallery</a></li>
-
-                                            <li role="presentation"><a href="#feature-parent-7" aria-controls="feature-7" role="tab" data-toggle="tab"><i class="fa fa-frown-o"></i>Raise Concerns</a></li>
-
-                                            <li role="presentation"><a href="#feature-parent-8" aria-controls="feature-8" role="tab" data-toggle="tab"><i class="fa fa-rocket"></i>Notification Repository</a></li>
-
-                                            <li role="presentation"><a href="#feature-parent-9" aria-controls="feature-9" role="tab" data-toggle="tab"><i class="fa fa-calendar"></i>Time Table(Daily/Exam)</a></li>
-                                        </ul>
-
-                                        <!-- Tab panes -->
-                                        <div class="feature-content tab-content col-md-8 col-sm-6 col-xs-12 col-md-pull-4 col-sm-pull-6 col-xs-pull-0">
-                                            <div role="tabpanel" class="tab-pane fade in active" id="feature-parent-1">
-                                             <img class="img-responsive img-rounded" border-radius="0.5%" src="assets/images/feature-parent-1.png" alt="screenshot" style ="">
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-parent-2">
-                                             <img class="img-responsive" src="assets/images/feature-parent-2.png" alt="screenshot" style ="" >
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-parent-3">
-                                             <img class="img-responsive" src="assets/images/feature-parent-3.png" alt="screenshot" style ="" >
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-parent-4">
-                                             <img class="img-responsive" src="assets/images/feature-parent-4.png" alt="screenshot" style ="" >
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-parent-5">
-                                             <img class="img-responsive" src="assets/images/feature-parent-5.png" alt="screenshot" style ="" >
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-parent-6">
-                                             <img class="img-responsive" src="assets/images/feature-parent-6.png" alt="screenshot" style ="" >
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-parent-7">
-                                             <img class="img-responsive" src="assets/images/feature-parent-7.png" alt="screenshot" style ="" >
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-parent-8">
-                                             <img class="img-responsive" src="assets/images/feature-parent-8.png" alt="screenshot" style ="" > </div>
-                                             <div role="tabpanel" class="tab-pane fade" id="feature-parent-9">
-                                                 <img class="img-responsive" src="assets/images/feature-parent-9.png" alt="screenshot" style ="" >
-                                             </div>
-                                         </div><!--//feature-content-->
-                                     </div><!--//tabbed-area-->
-                                 </div><!--//item-->
-
-                                 <div id="staffapp" class="item">
-                                    <div class="tabbed-area row">
-
-                                        <!-- Nav tabs -->
-                                        <ul class="feature-nav nav nav-pill nav-stacked text-left col-md-4 col-sm-6 col-xs-12 col-md-push-8 col-sm-push-6 col-xs-push-0" role="tablist" style="margin-top: 5px !important">
-                                            <li role="presentation" ><a aria-controls="feature-1" role="tab" data-toggle="tab"><h2 style="margin-top: -10px !important"><i class="fa fa-mobile"> Staff App</i></h2></a></li>
-                                            <li role="presentation" class="active"><a href="#feature-school-1" aria-controls="feature-1" role="tab" data-toggle="tab"><i class="fa fa-bar-chart"></i>Utility Dashboard</a>
-                                            </li>
-
-                                            <li role="presentation"><a href="#feature-school-2" aria-controls="feature-2" role="tab" data-toggle="tab"><i class="fa fa-calendar-check-o"></i>Attendance Portal</a></li>
-
-                                            <li role="presentation"><a href="#feature-school-3" aria-controls="feature-3" role="tab" data-toggle="tab"><i class="fa fa-line-chart"></i>Marks Entry/Assesment</a></li>
-
-                                            <li role="presentation"><a href="#feature-school-9" aria-controls="feature-9" role="tab" data-toggle="tab"><i class="fa fa-history"></i>Weekly Tracker</a></li>
-
-                                            <li role="presentation"><a href="#feature-school-4" aria-controls="feature-4" role="tab" data-toggle="tab"><i class="fa fa-edit"></i>Create Assignments</a></li>
-
-                                            <li role="presentation"><a href="#feature-school-5" aria-controls="feature-5" role="tab" data-toggle="tab"><i class="fa fa-rocket"></i>Send Instant Notifications to Parent</a></li>
-
-                                            <li role="presentation"><a href="#feature-school-6" aria-controls="feature-6" role="tab" data-toggle="tab"><i class="fa fa-image"></i>Upload Photos &amp; Share</a></li>
-
-                                            <li role="presentation"><a href="#feature-school-7" aria-controls="feature-7" role="tab" data-toggle="tab"><i class="fa fa-frown-o"></i>Address concerns/quries from parents</a></li>
-
-                                            <li role="presentation"><a href="#feature-school-8" aria-controls="feature-8" role="tab" data-toggle="tab"><i class="fa fa-calendar"></i>Check Time Table(Daily/Exam)</a></li>
-                                        </ul>
-
-                                        <!-- Tab panes -->
-                                        <div class="feature-content tab-content col-md-8 col-sm-6 col-xs-12 col-md-pull-4 col-sm-pull-6 col-xs-pull-0">
-                                            <div role="tabpanel" class="tab-pane fade in active" id="feature-school-1">
-                                             <img class="img-responsive img-rounded" border-radius="0.5%" src="assets/images/feature-school-1.png" alt="screenshot" style ="">
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-school-2">
-                                             <img class="img-responsive" src="assets/images/feature-school-2.png" alt="screenshot" style ="">
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-school-3">
-                                             <img class="img-responsive" src="assets/images/feature-school-3.png" alt="screenshot" style ="" >
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-school-4">
-                                             <img class="img-responsive" src="assets/images/feature-school-4.png" alt="screenshot" style ="" >
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-school-5">
-                                             <img class="img-responsive" src="assets/images/feature-school-5.png" alt="screenshot" style ="" >
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-school-6">
-                                             <img class="img-responsive" src="assets/images/feature-school-6.png" alt="screenshot" style ="" >
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-school-7">
-                                             <img class="img-responsive" src="assets/images/feature-school-7.png" alt="screenshot" style ="" >
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-school-8">
-                                             <img class="img-responsive" src="assets/images/feature-school-8.png" alt="screenshot" style ="" >
-                                         </div>
-                                         <div role="tabpanel" class="tab-pane fade" id="feature-school-9">
-                                             <img class="img-responsive" src="assets/images/feature-school-9.png" alt="screenshot" style ="" >
-                                         </div>
-                                     </div><!--//feature-content-->
-                                 </div><!--//tabbed-area-->
-                             </div><!--//item-->
-                         </div><!--//carousel-inner-->
-                     </div><!--//carousel-->
-                 </div><!--//hero-->
-
-
-             </div><!--//container-->
-             <!-- Indicators -->
-
-         </div><!--//features-->
-         <br>
-
-         <div id="demo" data-section="products">
-
-            <div class="container" style="margin-top: 60px">
-
-                <div class="row" >
-
-                    <div class="col-md-8 col-md-offset-2 fh5co-section-heading text-center">
-                        <h2 class="fh5co-lead animate-single product-animate-1" >Not Amazed yet?</h2>
-                        <p  class="fh5co-sub animate-single product-animate-2">Here are some sample videos to demonstrate the end-to-end flow between Console/Staff App and Parent App. Communication has never been so easy before</p>
-                    </div>
-                </div>
-                <div class="row" style="padding-bottom: 10px" >
-                    <div class="video-container col-md-6 col-md-push-6" style="text-align:center" ">
-                     <iframe  src="https://www.youtube.com/embed/BT1TZDsPi-M?list=PLPCj9sXgvgYRvPOaWl3qZAcqOq7bPnkZP" frameborder="0" allowfullscreen></iframe>
-                 </div >
-
-                 <div class="video-container col-md-6 col-md-pull-6 style="text-align:center"">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/?listType=playlist&list=PLPCj9sXgvgYQ78ogcpIOpWMfKesT8JrLx" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-            </div>
-
         </div>
-    </div>
-    <br>
-    <br>
+    </header>
 
-    <div id="contact" class="contact-section">
-	
-        <div class="container text-center">
-		
-            <h2 class="section-title">Contact Us</h2>
-			
-            <div class="contact-content">
-			<div class="blur">
-                <p class="contact-us-details">
-                    The Oval Building, Level 2, <br> Hi-Tech City, Madhapur, Hyderabad, Telangana 500081 <br>
-                    <b>Phone: </b>(+91) 9550304242<br/>
-                    <b>Email: </b> <a href="mailto:contact@appyschool.in">contact@appyschool.in</a>
-                </p>
-                <div>
+    <main>
+        <!-- Hero Section: The "Floating Dashboard" Composition -->
+        <section class="hero slide-up">
+            <div class="container hero-grid">
 
-                    <a href="https://www.facebook.com/appyschool.in/" target="_blank">
-                        <img src="assets/images/facebook.png" width="32" alt="Facebook">
-                    </a>
-                    <a href="https://twitter.com/appy_school" target="_blank">
-                        <img src="assets/images/twitter.png" width="32" alt="Twitter">
-                    </a>
-                    <a href="https://www.youtube.com/channel/UCiU3F6jIwgEIhPK_J5gNN4A/videos" target="_blank">
-                        <img src="https://www.gstatic.com/images/icons/material/product/2x/youtube_64dp.png" width="32" alt="Youtube">
-                    </a>
+                <div class="hero-text">
+                    <div class="badge-pill">
+                        <span class="pulse-dot"></span> The Connected School Ecosystem
+                    </div>
+                    <h1 class="headline">The Unified Operating System for Your <span>School.</span></h1>
+                    <p class="subheadline">Unify administration, engage parents, and empower teachers with an
+                        intelligent cloud platform designed specifically for modern education.</p>
+
+                    <div class="hero-actions">
+                        <div class="email-capture">
+                            <input type="email" placeholder="Enter your work email">
+                            <button class="btn btn-primary trigger-demo-modal">Start Free Demo</button>
+                        </div>
+                        <p class="trust-text"><i class='bx bx-lock-alt'></i> No credit card required. Setup in minutes.
+                        </p>
+                    </div>
                 </div>
-				</div>
+
+                <div class="hero-visual">
+                    <div class="composition-container">
+                        <!-- We will style the web dashboard as a CSS frame holding the parent app image for context, 
+                             and float the phone skins around it -->
+                        <div class="web-dashboard-frame">
+                            <div class="browser-top">
+                                <i></i><i></i><i></i>
+                            </div>
+                            <img src="assets/images/parent_app_dashboard.jpg" alt="Web Dashboard" class="web-img">
+                        </div>
+
+                        <div class="floating-phone phone-1">
+                            <img src="assets/images/PhoneSkin-s1.png" alt="Phone Outline" class="phone-skin">
+                            <img src="assets/images/staff_app_attendance.jpg" alt="Staff App Menu" class="phone-screen">
+                        </div>
+
+                        <!-- Floating UI Chips -->
+                        <div class="ui-chip chip-1">
+                            <div class="chip-icon bg-green"><i class='bx bx-check'></i></div>
+                            <div class="chip-text">
+                                <strong>Attendance Taken</strong>
+                                <span>Grade 10-A • Just now</span>
+                            </div>
+                        </div>
+
+                        <div class="ui-chip chip-2">
+                            <div class="chip-icon bg-orange"><i class='bx bx-credit-card'></i></div>
+                            <div class="chip-text">
+                                <strong>Fee Received</strong>
+                                <span>₹25,000 via Parent App</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-			
-        </div><!--//container-->
-		
-    </div><!--//contact-section-->
+        </section>
+
+        <!-- Persona-Driven Section -->
+        <section class="personas section bg-light fade-in" id="solutions">
+            <div class="container">
+                <div class="section-heading center">
+                    <h2>One Platform. Built for Everyone.</h2>
+                    <p>Appy School provides tailored experiences for every stakeholder — from a commanding web console
+                        for admins to dedicated mobile apps for teachers and parents.</p>
+                </div>
+
+                <div class="persona-cards">
+                    <!-- Admin -->
+                    <div class="p-card">
+                        <div class="p-icon"><i class='bx bx-buildings'></i></div>
+                        <h3>For Administrators</h3>
+                        <p>Experience ultimate efficiency. Manage fees, track live GPS fleet data, handle HR, run
+                            admissions funnels, and gain analytics across all your branches — from a single dashboard.
+                        </p>
+                        <ul class="p-list">
+                            <li><i class='bx bx-check-circle'></i>💰 Automated Fee Collections & Digital Receipts</li>
+                            <li><i class='bx bx-check-circle'></i>🏢 Multi-Branch Control</li>
+                            <li><i class='bx bx-check-circle'></i>🚀 Admissions+</li>
+                            <li><i class='bx bx-check-circle'></i>📂 Paperless Doc Vault</li>
+                            <li><i class='bx bx-check-circle'></i>📣 Automated Notifications</li>
+                        </ul>
+                    </div>
+
+                    <!-- Teachers -->
+                    <div class="p-card highlighted">
+                        <div class="p-icon"><i class='bx bx-chalkboard'></i></div>
+                        <h3>For Teachers</h3>
+                        <p>A self-running institute! Teachers manage attendance, marks, and notifications for their own
+                            sections — no admin dependency. Plus, AI tools that cut lesson planning time dramatically.
+                        </p>
+                        <ul class="p-list">
+                            <li><i class='bx bx-check-circle'></i> Daily & Period-wise Attendance</li>
+                            <li><i class='bx bx-check-circle'></i> Digital Assignments & Homework</li>
+                            <li><i class='bx bx-check-circle'></i> Marks Entry → Auto Report Cards</li>
+                            <li><i class='bx bx-check-circle'></i> Send & Manage Notifications</li>
+                            <li><i class='bx bx-check-circle'></i> ✨ AI Lesson Planner & MCQ Test Generator</li>
+                        </ul>
+                    </div>
+
+                    <!-- Parents -->
+                    <div class="p-card">
+                        <div class="p-icon"><i class='bx bx-family'></i></div>
+                        <h3>For Parents</h3>
+                        <p>Assignments appear on the app before the child even reaches home. Live bus tracking, online
+                            fee payments, direct staff chat, and full academic visibility — all in one pocket-sized app.
+                        </p>
+                        <ul class="p-list">
+                            <li><i class='bx bx-check-circle'></i> Real-time Push, SMS & Email Alerts</li>
+                            <li><i class='bx bx-check-circle'></i> Homework and Classworks</li>
+                            <li><i class='bx bx-check-circle'></i> Digital Notice Board</li>
+                            <li><i class='bx bx-check-circle'></i> Online Fee Payments</li>
+                            <li><i class='bx bx-check-circle'></i> Leaves & Holidays</li>
+                            <li><i class='bx bx-check-circle'></i> Live GPS Bus Tracking</li>
+                            <li><i class='bx bx-check-circle'></i> Grievance Desk & Direct Chat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Tabbed Features Showcase -->
+        <section class="platform-hub section fade-in" id="platform">
+            <div class="container">
+                <div class="hub-grid">
+                    <div class="hub-nav">
+                        <h2>Core Modules</h2>
+                        <p>Everything you need to run a modern institution.</p>
+
+                        <div class="tab-list" id="feature-tabs">
+                            <button class="tab-btn active" data-target="collaboration">Campus Collaboration</button>
+                            <button class="tab-btn" data-target="admin">Administrative Excellence</button>
+                            <button class="tab-btn" data-target="academics">Academic Intelligence</button>
+                            <button class="tab-btn" data-target="logistics">Operational Logistics</button>
+                            <button class="tab-btn" data-target="testzone">Student TestZone</button>
+                        </div>
+                    </div>
+
+                    <div class="hub-content">
+                        <!-- Pillar 1: Administrative Excellence -->
+                        <div class="tab-pane" id="pane-admin">
+                            <div class="pane-header">
+                                <div class="pane-icon"><i class='bx bx-buildings'></i></div>
+                                <h3>Administrative Excellence</h3>
+                            </div>
+                            <p>Command your entire institution with absolute precision. Manage multi-branch operations,
+                                automate complex fee structures, and convert admissions data into actionable insights —
+                                all through a single, secure cloud dashboard.</p>
+                            <div class="pane-stats">
+                                <div class="stat"><span class="num">100%</span><span class="label">Digital
+                                        Finance</span></div>
+                                <div class="stat"><span class="num">Multi-Branch</span><span class="label">Central
+                                        Control</span></div>
+                                <div class="stat"><span class="num">Real-time</span><span class="label">Fee
+                                        Analytics</span></div>
+                            </div>
+                        </div>
+
+                        <!-- Pillar 2: Academic Intelligence -->
+                        <div class="tab-pane" id="pane-academics">
+                            <div class="pane-header">
+                                <div class="pane-icon" style="color: #a855f7;"><i class='bx bx-brain'></i></div>
+                                <h3>Academic Intelligence</h3>
+                            </div>
+                            <p>Beyond attendance and report cards. Empower teachers with AI-driven lesson planning,
+                                automated timetable balancing, and smart assessments that move the needle on student
+                                performance.</p>
+                            <div class="pane-stats">
+                                <div class="stat"><span class="num">AI-Powered</span><span class="label">Lesson
+                                        Planning</span></div>
+                                <div class="stat"><span class="num">Auto</span><span class="label">Report Cards</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pillar 3: Campus Collaboration -->
+                        <div class="tab-pane active" id="pane-collaboration">
+                            <div class="pane-header">
+                                <div class="pane-icon"><i class='bx bx-group'></i></div>
+                                <h3>Campus Collaboration</h3>
+                            </div>
+                            <p>Bridge the gap between school and home. Experience the perfect synergy between our
+                                **Staff App** and **Parent App** — where classroom updates, assignments, and chat flow
+                                instantly across the ecosystem.</p>
+
+                            <!-- Interactive Side-by-Side App Comparison -->
+                            <div class="app-comparison-container" style="margin-top: 30px;">
+                                <div class="comparison-tabs" style="flex-wrap: wrap; gap: 8px;">
+                                    <button class="comp-tab active" data-comp="attendance"><i
+                                            class='bx bx-check-circle'></i> Attendance</button>
+                                    <button class="comp-tab" data-comp="assignments"><i class='bx bx-book-content'></i>
+                                        Assignments</button>
+                                    <button class="comp-tab" data-comp="assessments"><i
+                                            class='bx bx-bar-chart-alt-2'></i> Assessments</button>
+                                    <button class="comp-tab" data-comp="notifications"><i class='bx bx-bell'></i>
+                                        Notifications</button>
+                                    <button class="comp-tab" data-comp="photoalbums"><i class='bx bx-images'></i> Photo
+                                        Albums</button>
+                                    <button class="comp-tab" data-comp="documents"><i class='bx bx-folder-open'></i>
+                                        Documents</button>
+                                    <button class="comp-tab" data-comp="concerns"><i class='bx bx-support'></i>
+                                        Concerns</button>
+                                    <button class="comp-tab" data-comp="chat"><i class='bx bx-message-rounded-dots'></i>
+                                        Direct Chat</button>
+                                </div>
+
+                                <div class="comparison-viewers">
+                                    <!-- Attendance View -->
+                                    <div class="comp-view active" id="comp-attendance">
+                                        <div class="comp-side staff-side">
+                                            <div class="side-badge staff-badge">Staff App</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/staff_gallery/attendance.jpg"
+                                                    alt="Staff Attendance">
+                                            </div>
+                                        </div>
+                                        <div class="comp-divider"><i class='bx bx-right-arrow-alt pulse-arrow'></i>
+                                        </div>
+                                        <div class="comp-side parent-side">
+                                            <div class="side-badge parent-badge">Parent App</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/parent_gallery/attendance.jpg"
+                                                    alt="Parent Attendance">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Assignments View -->
+                                    <div class="comp-view" id="comp-assignments">
+                                        <div class="comp-side staff-side">
+                                            <div class="side-badge staff-badge">Staff App</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/staff_gallery/assignments.jpeg"
+                                                    alt="Staff Assignments">
+                                            </div>
+                                        </div>
+                                        <div class="comp-divider"><i class='bx bx-right-arrow-alt pulse-arrow'></i>
+                                        </div>
+                                        <div class="comp-side parent-side">
+                                            <div class="side-badge parent-badge">Parent App</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/parent_gallery/assignments.jpg"
+                                                    alt="Parent Assignments">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Assessments View -->
+                                    <div class="comp-view" id="comp-assessments">
+                                        <div class="comp-side staff-side">
+                                            <div class="side-badge staff-badge">Staff App</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/staff_gallery/assessments.jpg"
+                                                    alt="Staff Assessments">
+                                            </div>
+                                        </div>
+                                        <div class="comp-divider"><i class='bx bx-right-arrow-alt pulse-arrow'></i>
+                                        </div>
+                                        <div class="comp-side parent-side">
+                                            <div class="side-badge parent-badge">Parent App</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/parent_gallery/assessments.jpg"
+                                                    alt="Parent Assessments">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Notifications View -->
+                                    <div class="comp-view" id="comp-notifications">
+                                        <div class="comp-side staff-side">
+                                            <div class="side-badge staff-badge">Staff App</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/staff_gallery/notifications.jpg"
+                                                    alt="Staff Notifications">
+                                            </div>
+                                        </div>
+                                        <div class="comp-divider"><i class='bx bx-right-arrow-alt pulse-arrow'></i>
+                                        </div>
+                                        <div class="comp-side parent-side">
+                                            <div class="side-badge parent-badge">Parent App</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/parent_gallery/notifications.jpeg"
+                                                    alt="Parent Notifications">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Photo Albums View -->
+                                    <div class="comp-view" id="comp-photoalbums">
+                                        <div class="comp-side staff-side">
+                                            <div class="side-badge staff-badge">Staff App</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/staff_gallery/photoalbums.jpg"
+                                                    alt="Staff Photo Albums">
+                                            </div>
+                                        </div>
+                                        <div class="comp-divider"><i class='bx bx-right-arrow-alt pulse-arrow'></i>
+                                        </div>
+                                        <div class="comp-side parent-side">
+                                            <div class="side-badge parent-badge">Parent App</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/parent_gallery/photo-albums.jpg"
+                                                    alt="Parent Photo Albums">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Documents View -->
+                                    <div class="comp-view" id="comp-documents">
+                                        <div class="comp-side staff-side">
+                                            <div class="side-badge staff-badge">Staff App</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/staff_gallery/documents.jpg"
+                                                    alt="Staff Documents">
+                                            </div>
+                                        </div>
+                                        <div class="comp-divider"><i class='bx bx-right-arrow-alt pulse-arrow'></i>
+                                        </div>
+                                        <div class="comp-side parent-side">
+                                            <div class="side-badge parent-badge">Parent App</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/parent_gallery/documents.jpg"
+                                                    alt="Parent Documents">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Concerns View -->
+                                    <div class="comp-view" id="comp-concerns">
+                                        <div class="comp-side staff-side">
+                                            <div class="side-badge staff-badge">Staff App</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/staff_gallery/concerns.jpg"
+                                                    alt="Staff Concerns">
+                                            </div>
+                                        </div>
+                                        <div class="comp-divider"><i class='bx bx-right-arrow-alt pulse-arrow'></i>
+                                        </div>
+                                        <div class="comp-side parent-side">
+                                            <div class="side-badge parent-badge">Parent App</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/parent_gallery/concerns.jpg"
+                                                    alt="Parent Concerns">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Chat View -->
+                                    <div class="comp-view" id="comp-chat">
+                                        <div class="comp-side staff-side">
+                                            <div class="side-badge staff-badge">Staff App</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/staff_gallery/chat.jpg" alt="Staff Chat">
+                                            </div>
+                                        </div>
+                                        <div class="comp-divider"><i class='bx bx-right-arrow-alt pulse-arrow'></i>
+                                        </div>
+                                        <div class="comp-side parent-side">
+                                            <div class="side-badge parent-badge">Parent App</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/parent_gallery/chat.jpg" alt="Parent Chat">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
-    <footer class="footer text-center">
+                        <!-- Pillar 4: Operational Logistics -->
+                        <div class="tab-pane" id="pane-logistics">
+                            <div class="pane-header">
+                                <div class="pane-icon"><i class='bx bx-bus'></i></div>
+                                <h3>Operational Logistics</h3>
+                            </div>
+                            <p>Streamline daily operations with real-time GPS fleet tracking, automated staff
+                                attendance, and secure paperless document vaults. Keep parents informed and your campus
+                                safe.</p>
+                            <div class="pane-stats">
+                                <div class="stat"><span class="num">Live</span><span class="label">GPS Tracking</span>
+                                </div>
+                                <div class="stat"><span class="num">Paperless</span><span class="label">Doc Vault</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pillar 5: Student TestZone -->
+                        <div class="tab-pane" id="pane-testzone">
+                            <div class="pane-header">
+                                <div class="pane-icon"><i class='bx bx-edit'></i></div>
+                                <h3>Student TestZone</h3>
+                            </div>
+                            <p>Turn parent smartphones into interactive learning stations. Thousands of practice
+                                questions, mock MCQ tests, and detailed progress tracking help students excel beyond the
+                                classroom.</p>
+
+                            <!-- Interactive Side-by-Side App Comparison -->
+                            <div class="app-comparison-container" style="margin-top: 30px;">
+                                <div class="comparison-viewers">
+                                    <div class="comp-view active">
+                                        <div class="comp-side staff-side">
+                                            <div class="side-badge staff-badge">Staff App: Exam Creation</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/staff_gallery/exam creation.jpeg"
+                                                    alt="Staff Exam Creation">
+                                            </div>
+                                        </div>
+                                        <div class="comp-divider"><i class='bx bx-right-arrow-alt pulse-arrow'></i>
+                                        </div>
+                                        <div class="comp-side parent-side">
+                                            <div class="side-badge parent-badge">Parent App: TestZone</div>
+                                            <div class="comp-phone mockup-light">
+                                                <img src="assets/images/parent_gallery/test-zone.jpg"
+                                                    alt="Parent Test Zone">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- hub-content -->
+                </div> <!-- hub-grid -->
+            </div> <!-- container -->
+        </section>
+
+    </main>
+
+    <!-- ✨ AI Spotlight Section -->
+    <section class="ai-spotlight section fade-in" id="ai">
         <div class="container">
-              <a href="index.html">Home</a> | <a href="about.html">About Us</a> | <a href="contact.html">Contact Us</a> | <a href="terms.html">Terms and Conditions</a> |  <a href="privacy.html">Privacy Policy</a> | <a href="refund.html">Refund Policy</a>  | <a href="pricing.html">Pay</a>  | <a href="https://demo.appyschool.in">Demo Login</a> <br/>
-            <small class="copyright"> &copy Copyright 2021 Varchinno Technologies Pvt. Ltd. All rights reserved.</small>
+            <div class="ai-spotlight-grid">
+                <div class="ai-text">
+                    <div class="badge-pill"
+                        style="background: rgba(168,85,247,0.15); border-color: rgba(168,85,247,0.3); color: #c084fc;">
+                        <span class="pulse-dot" style="background: #a855f7;"></span> Next-Gen Intelligence
+                    </div>
+                    <h2>The Smart <span
+                            style="background: linear-gradient(135deg, #c084fc, #818cf8); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Advantage.</span>
+                    </h2>
+                    <p class="ai-lead">Experience the future of school management. Our built-in <strong>AI
+                            Agents</strong> let you stay on top of everything effortlessly. Simply <strong>chat with
+                            your data</strong> to get instant answers about student performance, fees, or staff records.
+                        No more digging through complex reports — just ask and get results.</p>
 
-        </div><!--//container-->
+                    <div class="ai-visual-mockup">
+                        <div class="browser-top">
+                            <i></i><i></i><i></i>
+                        </div>
+                        <img src="assets/images/console-with-ai-assistant.png" alt="AI Assistant Console"
+                            class="ai-dashboard-img">
+                    </div>
+
+                    <p class="ai-footnote"><i class='bx bx-shield-check'></i> <strong>AI proposes — you
+                            approve.</strong> No decision is ever made without your sign-off. Always human in the loop.
+                    </p>
+                </div>
+                <div class="ai-cards-grid">
+                    <div class="ai-feat-card">
+                        <div class="ai-feat-icon">✨</div>
+                        <h4>AI Academic Mentor</h4>
+                        <p>An intelligent assistant that helps teachers draft comprehensive lesson plans and interactive
+                            activities in seconds.</p>
+                    </div>
+                    <div class="ai-feat-card">
+                        <div class="ai-feat-icon">🤖</div>
+                        <h4>Smart Admin Automation</h4>
+                        <p>Admins automate repetitive work at scale — always with a human in the loop. AI proposes, you
+                            approve.</p>
+                    </div>
+                    <div class="ai-feat-card">
+                        <div class="ai-feat-icon">🗓️</div>
+                        <h4>AI Timetable Builder</h4>
+                        <p>Stop breaking your head over scheduling! AI crafts optimized timetables in minutes, balancing
+                            teacher loads and room availability automatically.</p>
+                    </div>
+                    <div class="ai-feat-card">
+                        <div class="ai-feat-icon">📝</div>
+                        <h4>Instant MCQ Test Generator</h4>
+                        <p>Create high-quality MCQ tests on the fly! AI generates question banks tailored to your
+                            syllabus for students to practice in the TestZone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Complete Suite Horizontal Scroll Strip -->
+    <section class="suite-strip-section">
+        <div class="suite-strip-label">
+            <span class="micro-pill">Our Complete Suite</span>
+            <p>20+ integrated modules. Everything to run a modern school on one platform.</p>
+        </div>
+        <div class="suite-strip-wrapper">
+            <div class="suite-strip">
+                <div class="suite-chip"><span class="chip-emoji">👨‍💼</span><span>Student & Staff Management</span>
+                </div>
+                <div class="suite-chip"><span class="chip-emoji">🔔</span><span>Smart Notifications</span></div>
+                <div class="suite-chip"><span class="chip-emoji">📝</span><span>Admissions Management</span></div>
+                <div class="suite-chip"><span class="chip-emoji">💰</span><span>Fee Management</span></div>
+                <div class="suite-chip"><span class="chip-emoji">📍</span><span>Daily & Period Attendance</span></div>
+                <div class="suite-chip"><span class="chip-emoji">🏖️</span><span>Leave Application Mgmt.</span></div>
+                <div class="suite-chip"><span class="chip-emoji">📚</span><span>Homework & Assignments</span></div>
+                <div class="suite-chip"><span class="chip-emoji">📊</span><span>Assessments and Reports</span></div>
+                <div class="suite-chip suite-chip--ai"><span class="chip-emoji">💻</span><span>Interactive Test
+                        Zone</span></div>
+                <div class="suite-chip"><span class="chip-emoji">🚌</span><span>Transport Management</span></div>
+                <div class="suite-chip"><span class="chip-emoji">📣</span><span>Events & Announcements</span></div>
+                <div class="suite-chip"><span class="chip-emoji">🤝</span><span>Parent Grievance Desk</span></div>
+                <div class="suite-chip"><span class="chip-emoji">📸</span><span>Photo Sharing (Showcase)</span></div>
+                <div class="suite-chip"><span class="chip-emoji">📄</span><span>Academic Docs Mgmt.</span></div>
+                <div class="suite-chip"><span class="chip-emoji">📒</span><span>Accounting & Expenses</span></div>
+                <div class="suite-chip"><span class="chip-emoji">📱</span><span>Whitelabel School Apps</span></div>
+                <div class="suite-chip"><span class="chip-emoji">🏢</span><span>Multi-Branch Management</span></div>
+                <div class="suite-chip"><span class="chip-emoji">💬</span><span>2-way Staff-Parent Chat</span></div>
+                <div class="suite-chip"><span class="chip-emoji">🎒</span><span>Student Kit Management</span></div>
+                <div class="suite-chip"><span class="chip-emoji">🛡️</span><span>Secure Roles & Access</span></div>
+                <div class="suite-chip suite-chip--ai"><span class="chip-emoji">✨</span><span>AI Teaching & Admin
+                        Tools</span></div>
+                <!-- Duplicate for seamless loop -->
+                <div class="suite-chip"><span class="chip-emoji">👨‍💼</span><span>Student & Staff Management</span>
+                </div>
+                <div class="suite-chip"><span class="chip-emoji">🔔</span><span>Smart Notifications</span></div>
+                <div class="suite-chip"><span class="chip-emoji">📝</span><span>Admissions Management</span></div>
+                <div class="suite-chip"><span class="chip-emoji">💰</span><span>Fee Management</span></div>
+                <div class="suite-chip"><span class="chip-emoji">📍</span><span>Daily & Period Attendance</span></div>
+                <div class="suite-chip"><span class="chip-emoji">🏖️</span><span>Leave Application Mgmt.</span></div>
+                <div class="suite-chip suite-chip--ai"><span class="chip-emoji">✨</span><span>AI Teaching & Admin
+                        Tools</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Apps Deep Dive -->
+    <section class="device-showcase bg-light section" id="apps">
+        <div class="container">
+            <!-- Parent App -->
+            <div class="showcase-row">
+                <div class="s-content">
+                    <div class="badge-pill bg-white">For Parents</div>
+                    <h2>App for Parents</h2>
+                    <p>Designed to keep parents intrinsically connected to their child's daily school life. Instant
+                        visibility into everything that matters.</p>
+
+                    <ul class="s-list">
+                        <li>
+                            <div class="s-list-icon"><i class='bx bx-bell'></i></div>
+                            <div class="s-list-text">
+                                <strong>Instant Notifications</strong>
+                                <span>Get real-time alerts for attendance, exam results, and emergencies.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="s-list-icon"><i class='bx bx-wallet'></i></div>
+                            <div class="s-list-text">
+                                <strong>One-Tap Fee Payments</strong>
+                                <span>View pending dues and pay securely within seconds via the app.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="s-list-icon"><i class='bx bx-support'></i></div>
+                            <div class="s-list-text">
+                                <strong>Direct Grievance Channel</strong>
+                                <span>Raise concerns and book parent-teacher meeting slots easily.</span>
+                            </div>
+                        </li>
+                    </ul>
+					<div class="store-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.varchinno.appyschool.parent" class="store-btn"><i class='bx bxl-play-store'></i> <span>Google Play</span></a>
+                        <a href="http://itunes.apple.com/us/app/appy-school-parent/id1249817799" class="store-btn"><i class='bx bxl-apple'></i> <span>App Store</span></a>
+                    </div>
+                </div>
+
+                <div class="s-visual">
+                    <div class="blob-bg blob-orange"></div>
+                    <img src="assets/images/parent_app_real.png" alt="Parent App Interface" class="s-phone">
+                </div>
+            </div>
+
+            <!-- Spacer -->
+            <div style="height: 120px;"></div>
+
+            <!-- Staff App -->
+            <div class="showcase-row reverse">
+                <div class="s-content">
+                    <div class="badge-pill bg-white">For Teachers & Staff</div>
+                    <h2>App for Staff</h2>
+                    <p>Empowering educators with tools that eliminate administrative overhead so they can focus entirely
+                        on teaching.</p>
+
+                    <ul class="s-list">
+                        <li>
+                            <div class="s-list-icon"><i class='bx bx-check-circle'></i></div>
+                            <div class="s-list-text">
+                                <strong>Frictionless Attendance</strong>
+                                <span>Take class attendance directly from the pocket. No registers needed.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="s-list-icon"><i class='bx bx-edit-alt'></i></div>
+                            <div class="s-list-text">
+                                <strong>Digital Assignments & Exams</strong>
+                                <span>Distribute assignments, attach files, and even create MCQ Mock Exams.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="s-list-icon"><i class='bx bx-photo-album'></i></div>
+                            <div class="s-list-text">
+                                <strong>Gallery & Food Updates</strong>
+                                <span>Snap and share classroom activities or meal photos with parents instantly.</span>
+                            </div>
+                        </li>
+                    </ul>
+					<div class="store-links">
+                        <a href="https://play.google.com/store/apps/details?id=com.varchinno.appyschool.parent" class="store-btn"><i class='bx bxl-play-store'></i> <span>Google Play</span></a>
+                        <a href="http://itunes.apple.com/us/app/appy-school-parent/id1249817799" class="store-btn"><i class='bx bxl-apple'></i> <span>App Store</span></a>
+                    </div>
+                </div>
+
+                <div class="s-visual">
+                    <div class="blob-bg blob-blue"></div>
+                    <img src="assets/images/staff_app_real.png" alt="Staff App Interface" class="s-phone">
+                </div>
+				
+            </div>
+        </div>
+    </section>
+
+    <!-- School Presence Map -->
+    <section class="map-section section bg-light fade-in">
+        <div class="container">
+            <div class="section-heading center">
+                <h2>Trusted by Schools Across India</h2>
+            </div>
+        </div>
+        <div class="map-wrapper india-map-container" id="presence-map"
+            style="height: 600px; background: #f8fafc; border-radius: 12px; margin: 20px 0; border: 1px solid #e2e8f0; position: relative; z-index: 1;">
+            <!-- Interactive Leaflet Map will be injected here -->
+        </div>
+        <div class="container">
+            <div class="map-stats">
+                <div class="map-stat"><span class="map-stat-num">60+</span><span class="map-stat-label">Schools</span>
+                </div>
+                <div class="map-stat"><span class="map-stat-num">15+</span><span class="map-stat-label">Locations</span>
+                </div>
+                <div class="map-stat"><span class="map-stat-num">20,000+</span><span class="map-stat-label">Students
+                        Served</span></div>
+                <div class="map-stat"><span class="map-stat-num">98%</span><span class="map-stat-label">Renewal
+                        Rate</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Security Banner -->
+    <section class="trust-banner section" id="security">
+        <div class="container center">
+            <h2>Enterprise-Grade Reliability</h2>
+            <p>Your institutional data is your most valuable asset. We treat it like ours.</p>
+
+            <div class="trust-features">
+                <div class="t-feat">
+                    <i class='bx bx-lock-alt'></i>
+                    <h4>End-to-End Encryption</h4>
+                    <p>HTTPS standard protocols for all data transmission.</p>
+                </div>
+                <div class="t-feat">
+                    <i class='bx bx-cloud-upload'></i>
+                    <h4>Automated Backups</h4>
+                    <p>Daily secure backups to prevent any absolute data loss.</p>
+                </div>
+                <div class="t-feat">
+                    <i class='bx bx-support'></i>
+                    <h4>24/7 Priority Support</h4>
+                    <p>A dedicated representative assigned to your exact needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta bg-light section">
+        <div class="container center">
+            <h2>Ready to Digitize Your Campus?</h2>
+            <br />
+
+            <a href="javascript:void(0)" class="btn btn-primary btn-large trigger-demo-modal">Request a Demo Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="brand-col">
+                    <img src="assets/images/AppySchool_logo-Photoroom.png" alt="Appy School" class="f-logo">
+                    <p>The ultimate Cloud-based All-in-One ERP solution for modern educational institutions.</p>
+                </div>
+
+                <div class="link-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#platform">Overview</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#apps">Mobile Apps</a></li>
+                        <li><a href="#security">Security</a></li>
+                        <li><a href="https://demo.appyschool.in">Demo Login</a></li>
+                    </ul>
+                </div>
+
+                <div class="link-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refund.html">Refund & Return Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="contact-col">
+                    <h4>Get In Touch</h4>
+                    <ul>
+                        <li><i class='bx bx-map'></i> WeWork, Rajapushpa Summit, Financial District, Manikonda,
+                            Hyderabad, Telangana 500032</li>
+                        <li><i class='bx bx-phone'></i> <a href="tel:+919550304242">+91 95503 04242</a></li>
+                        <li><i class='bx bx-envelope'></i> <a href="mailto:contact@appyschool.in">contact@appyschool.in</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Varchinno Technologies Pvt. Ltd. | <a href="privacy.html"
+                        style="color: var(--c-primary);">Privacy</a> &middot; <a href="terms.html"
+                        style="color: var(--c-primary);">Terms</a> &middot; <a href="refund.html"
+                        style="color: var(--c-primary);">Refund</a></p>
+            </div>
+        </div>
     </footer>
 
-    
+    <!-- Demo Modal -->
+    <div class="modal-overlay" id="demo-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="close-modal">&times;</button>
+            <div class="modal-header">
+                <h2>Book Your Private Demo</h2>
+                <p>See how Appy School can transform your institution.</p>
+            </div>
+            <form id="demo-form" class="demo-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="full-name">Full Name*</label>
+                        <input type="text" id="full-name" name="full-name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="work-email">Work Email*</label>
+                        <input type="email" id="work-email" name="work-email" required placeholder="john@school.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+91 XXXXX XXXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="school-name">School Name*</label>
+                        <input type="text" id="school-name" name="school-name" required
+                            placeholder="Greenwood International">
+                    </div>
+                    <div class="form-group">
+                        <label for="designation">Designation*</label>
+                        <input type="text" id="designation" name="designation" required placeholder="Principal / Admin">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City*</label>
+                        <input type="text" id="city" name="city" required placeholder="Hyderabad">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Submit Request</button>
+                <p class="form-note">By submitting, you agree to our <a href="privacy.html">Privacy Policy</a>.
+                </p>
+            </form>
 
-    <!-- Javascript -->          
-    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>     
-    <script type="text/javascript" src="assets/js/main.js"></script> 
+            <div id="form-success" class="form-success" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h3>Request Received!</h3>
+                <p>Our team will reach out to you within 24 hours to schedule your personalized demo.</p>
+                <button class="btn btn-primary" id="btn-done">Got it</button>
+            </div>
+        </div>
+    </div>
 
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
 </body>
-</html> 
 
+</html>

@@ -1,38 +1,66 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> 
-<html lang="en"> <!--<![endif]-->  
+<html lang="en">
+
 <head>
-    <title>Appy School</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Web based School Management Solution with mobile applications for Parents and Staff">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
-    <link rel="shortcut icon" href="favicon.ico">  
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-    <link rel="canonical" href="index.html"/>
-    <!-- <link rel="stylesheet" href="css2/style.css" type="text/css" media="screen" /> -->
-    <link rel="stylesheet" href="css2/styles/fonts.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" type="text/css" />
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oxygen:400,300,700" type="text/css" />
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Headland+One" type="text/css" />
-    <link rel="stylesheet" href="css2/styles/jackbox.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="css2/styles/jquery.jPlayer.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="css2/styles/jquery.isotope.css" type="text/css" media="screen" />
-</head> 
+    <title>Appy School | The Modern School Operating System</title>
+
+    <meta name="description"
+        content="Appy School is the ultimate all-in-one ERP platform. Unify administration, engage parents, and empower teachers with our Web and Mobile Apps.">
+
+    <!-- Google Fonts: Plus Jakarta Sans (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- Boxicons for Modern Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Leaflet CSS for Interactive Map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+</head>
 
 <body>
-    <div style="margin-left: 10px;">
-        <h3 style="text-align: center;">Privacy Policy </h3>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container navbar">
+            <a href="#" class="brand">
+                <img src="assets/images/AppySchool_logo-Photoroom.png" alt="Appy School Logo" class="logo">
+            </a>
+
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html#platform" class="nav-link">Platform</a></li>
+                    <li><a href="index.html#solutions" class="nav-link">Solutions</a></li>
+                    <li><a href="index.html#apps" class="nav-link">Mobile Apps</a></li>
+                    <li><a href="index.html#ai" class="nav-link" style="color: #a855f7;">✨ AI Features</a></li>
+                    <li><a href="index.html#security" class="nav-link">Security & Trust</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <a href="javascript:void(0)" class="btn btn-primary trigger-demo-modal">Book a Demo</a>
+                <div class="mobile-toggle" id="mobile-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Legal Document Content -->
+    <main>
+        <section class="section pt-10 pb-10" style="margin-top: 80px; min-height: 60vh;">
+            <div class="container" style="max-width: 900px; background: #fff; padding: 40px; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                <div>
+        <h3 >Privacy Policy </h3>
         <h3>SECTION 1 - WHAT DO WE DO WITH YOUR INFORMATION?</h3>
         <p>When you purchase something from our store, as part of the buying and selling process, we collect the personal information you give us such as your name, address and email address.
             When you browse our store, we also automatically receive your computer’s internet protocol (IP) address in order to provide us with information that helps us learn about your browser and operating system.
@@ -87,22 +115,112 @@
         <p>If you would like to: access, correct, amend or delete any personal information we have about you, register a complaint, or simply want more information contact our Privacy Compliance Officer at info@varchinno.com or by mail at contact@varchinno.com</p>
 
     </div>
+            </div>
+        </section>
+    </main>
 
-
-    <footer class="footer text-center">
+<footer class="site-footer">
         <div class="container">
+            <div class="footer-grid">
+                <div class="brand-col">
+                    <img src="assets/images/AppySchool_logo-Photoroom.png" alt="Appy School" class="f-logo">
+                    <p>The ultimate Cloud-based All-in-One ERP solution for modern educational institutions.</p>
+                </div>
 
-            <small class="copyright"> &copy Copyright 2018 Varchinno Technologies Pvt. Ltd. All rights reserved.</small>
+                <div class="link-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#platform">Overview</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#apps">Mobile Apps</a></li>
+                        <li><a href="#security">Security</a></li>
+                        <li><a href="https://demo.appyschool.in">Demo Login</a></li>
+                    </ul>
+                </div>
 
-        </div><!--//container-->
+                <div class="link-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refund.html">Refund & Return Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="contact-col">
+                    <h4>Get In Touch</h4>
+                    <ul>
+                        <li><i class='bx bx-map'></i> WeWork, Rajapushpa Summit, Financial District, Manikonda,
+                            Hyderabad, Telangana 500032</li>
+                        <li><i class='bx bx-phone'></i> +91 95503 04242</li>
+                        <li><i class='bx bx-envelope'></i> contact@appyschool.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Varchinno Technologies Pvt. Ltd. | <a href="privacy.html"
+                        style="color: var(--c-primary);">Privacy</a> &middot; <a href="terms.html"
+                        style="color: var(--c-primary);">Terms</a> &middot; <a href="refund.html"
+                        style="color: var(--c-primary);">Refund</a></p>
+            </div>
+        </div>
     </footer>
 
-    <!-- Javascript -->          
-    <script type="text/javascript" src="assets/plugins/jquery-1.12.3.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>     
-    <script type="text/javascript" src="assets/js/main.js"></script> 
+    <!-- Demo Modal -->
+    <div class="modal-overlay" id="demo-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="close-modal">&times;</button>
+            <div class="modal-header">
+                <h2>Book Your Private Demo</h2>
+                <p>See how Appy School can transform your institution.</p>
+            </div>
+            <form id="demo-form" class="demo-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="full-name">Full Name*</label>
+                        <input type="text" id="full-name" name="full-name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="work-email">Work Email*</label>
+                        <input type="email" id="work-email" name="work-email" required placeholder="john@school.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number*</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+91 XXXXX XXXXX">
+                    </div>
+                    <div class="form-group">
+                        <label for="school-name">School Name*</label>
+                        <input type="text" id="school-name" name="school-name" required
+                            placeholder="Greenwood International">
+                    </div>
+                    <div class="form-group">
+                        <label for="designation">Designation*</label>
+                        <input type="text" id="designation" name="designation" required placeholder="Principal / Admin">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City*</label>
+                        <input type="text" id="city" name="city" required placeholder="Hyderabad">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Submit Request</button>
+                <p class="form-note">By submitting, you agree to our <a href="privacy.html">Privacy Policy</a>.
+                </p>
+            </form>
 
+            <div id="form-success" class="form-success" style="display: none;">
+                <div class="success-icon">✓</div>
+                <h3>Request Received!</h3>
+                <p>Our team will reach out to you within 24 hours to schedule your personalized demo.</p>
+                <button class="btn btn-primary" id="btn-done">Got it</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!-- Scripts -->
+    <script src="assets/js/script.js"></script>
 </body>
-</html> 
 
+</html>
